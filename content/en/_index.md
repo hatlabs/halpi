@@ -39,7 +39,6 @@ It is more compact and suitable for installations where space is limited and few
 
 You can purchase HALPI computers from [Hat Labs Oy](https://shop.hatlabs.fi).
 
-
 ## Community and Support
 
 Hat Labs provides support for the HALPI hardware at [info@hatlabs.fi](mailto:info@hatlabs.fi).
