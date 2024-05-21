@@ -1,5 +1,5 @@
-baseURL: https://docs.hatlabs.fi/halmet/
-title: "HALMET: Hat Labs Marine Engine & Tank Interface"
+baseURL: https://docs.hatlabs.fi/halpi/
+title: "HALPI: Hat Labs Raspberry Pi Boat Computer"
 contentDir: content/en
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
@@ -15,9 +15,9 @@ params:
   version_menu: Versions
   archived_version: false
   version: "1.0"
-  url_latest_version: https://docs.hatlabs.fi/halmet/
-  github_repo: https://github.com/hatlabs/halmet
-  github_project_repo: https://github.com/hatlabs/HALMET-hardware
+  url_latest_version: https://docs.hatlabs.fi/halpi/
+  github_repo: https://github.com/hatlabs/halpi
+  github_project_repo: https://github.com/hatlabs/halpi
   github_branch: main
   gcs_engine_id: a31868f3e68674aa2
   offlineSearch: false
@@ -46,10 +46,10 @@ params:
     feedback:
       enable: false
       yes: Glad to hear it! Please <a
-        href="https://github.com/hatlabs/sh-rpi/issues/new">tell us how we can
+        href="https://github.com/hatlabs/halpi/issues/new">tell us how we can
         improve</a>.
       no: Sorry to hear that. Please <a
-        href="https://github.com/hatlabs/sh-rpi/issues/new">tell us how we can
+        href="https://github.com/hatlabs/halpi/issues/new">tell us how we can
         improve</a>.
     readingtime:
       enable: false
@@ -64,13 +64,12 @@ services:
     id: G-F3KDPEBJEF
 languages:
   en:
-    title: "HALMET: Hat Labs Marine Engine & Tank interface"
+    title: "HALPI: Hat Labs Raspberry Pi Boat Computer"
     languageName: English
     weight: 1
     params:
       description:
-        Marine development platform for connecting typical engines and
-        resistive sensors
+        Deeply embedded boat computer running on Raspberry Pi.
       time_format_default: 2006-01-02
       time_format_blog: 2006-01-02
 markup:

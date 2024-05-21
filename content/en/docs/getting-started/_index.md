@@ -3,68 +3,44 @@ title: Getting Started
 weight: 200
 ---
 
-## Hardware Assembly
+## Hardware Installation
 
-To accommodate more flexible connector placement in small enclosures, HALMET boards are delivered without the 1-Wire or GPIO headers installed. If you plan to use either of these interfaces, you will need to solder the headers to the board.
+If you intend to power the HALPI computer via the NMEA 2000 network, the device is ready to use as-is!
+Connect the HALPI computer to the NMEA 2000 network using a Micro-C drop cable and a T-connector.
+To minimize voltage drop over the network backbone, it is recommended to place the HALPI computer close to the power feed.
 
-If you need instructions for soldering header pins on the board, have a look at the SH-ESP32 [hardware assembly instructions](https://docs.hatlabs.fi/sh-esp32/pages/getting-started/#revision-1-boards).
+If you intend to power HALPI using a dedicated power connector, you need to open the enclosure and replace the green NMEA 2000 power connector with the dedicated power connector.
+See the photo below.
+In this case, you need to solder a power cable to the provided SP13 cable plug.
+The maximum wire size for the connector is 2 mm² or 14 AWG.
 
-## Powering the Board
-
-HALMET is powered through the NMEA 2000 connector. If you are going to connect HALMET to a NMEA 2000 network, you can power the board directly from the network. In that
-case, connect the NMEA 2000 wires to the 4-pin pluggable terminal connector as shown in the following figure.
-
-{{< imgrel "halmet_n2k_input.jpg" "50%" >}}
-Connect the NMEA 2000 wires to the connector as shown.
+{{< imgrel "halpi_power_connectors.jpg" "60%" >}}
+To power HALPI using a dedicated power connector, replace the green plug #1 with the plug #2.
 {{< /imgrel >}}
 
-If you are not going to connect HALMET to a NMEA 2000 network, use the same connector but only connect wires to the `-` and `+` locations. Any 5-32 V power source can be used. Typical current consumption of the board with the WiFi active is 0.07 A at 12 V.
+Despite being waterproof, the enclosure should be protected from the elements.
+HALPI computers can be mounted in any orientation. If mounted on a wall, the enclosure should be mounted with the cable glands facing downwards or to the side to minimize the possibility of water ingress.
+Velcro tape is an excellent option for wall-mounting since it is relatively secure and allows for easy removal of the computer.
+The HALPI-M enclosure also allows for screw mounting using the 4 mm screw holes under the plastic lid screws.
+If a HALPI-S is to be screw-mounted, mounting tabs need to be devised and attached to the enclosure.
 
-{{< imgrel "power_connector.jpg" "50%" >}}
-Connect the power wires to the connector as shown.
-{{< /imgrel >}}
+## Initial Configuration
 
-## Enclosures
+HALPI comes pre-installed with OpenPlotter 4 Headless edition.
+It can be used either with or without a display, keyboard, and mouse.
 
-For use on a boat, HALMET should always be placed in a waterproof enclosure.
-The board is designed to fit the [SH-ESP32 Enclosure](https://shop.hatlabs.fi/products/sh-esp32-enclosure). See below for an example of a HALMET board installed in the enclosure.
+Follow the [OpenPlotter 4 documentation](https://openplotter.readthedocs.io/en/4.x.x/getting_started/first_steps.html) to configure the system.
+The initial setup can be done most easily using [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) to connect to the HALPI computer.
+This provides a remote desktop interface to access the HALPI desktop interface.
 
-{{< imgrel "halmet_small_enclosure.jpg" "50%" >}}
-HALMET installed in the SH-ESP32 enclosure.
-{{< /imgrel >}}
+Important steps are to change the default password, the WiFi Access Point password, and to configure WiFi client settings if needed.
 
-The SH-ESP32 enclosure has a limited amount of space for connectors.
-Each of the long sides can practically only take 2-3 panel connectors.
-If you intend to connect more than a few inputs, a larger enclosure is recommended.
-For example, the Hat Labs [Compact SH-RPi Enclosure](https://shop.hatlabs.fi/products/compact-weatherproof-enclosure-for-raspberry-pi-and-sh-rpi-158x90x60-mm), shown below, already has ample room for connectors.
+## Configuring Signal K
 
-{{< imgrel "medium_enclosure.jpg" "50%" >}}
-the Compact SH-RPi Enclosure provides more room for panel connector placement.
-{{< /imgrel >}}
+Signal K is a modern and open-source universal marine data exchange format and server that can be used to connect various navigation software and hardware.
+OpenPlotter 4 comes pre-installed with Signal K.
+Basic interfaces such as NMEA 2000 and GPS, if any, are pre-configured, but you may need to adjust the settings to match your specific setup.
+Access the Signal K web interface by navigating to `http://openplotter.local:3000` in your web browser.
+You can do that using your computer web browser or even a smartphone or tablet -- it doesn't have to be over the VNC Viewer.
 
-
-Other suitable waterproof enclosures can easily be found on any online marketplace. Larger outdoor junction boxes are also suitable for the purpose.
-
-### Drilling Holes for Panel Connectors
-
-The enclosures typically do not have pre-drilled holes. When drilling holes,
-always use a conical or step drill bits (one that looks like a small metal Christmas tree). Standard metal drill bits may easily bite too hard and crack the enclosure wall.
-
-When planning the hole/connector placement, leave sufficient room for tightening the connector nuts and for the connector body. If you're planning to wall-mount the enclosure, it is recommended to place the connectors facing down to minimize the chances for water ingress.
-
-Suitable hole sizes for different connectors:
-
-- PG7 cable gland and M12 (NMEA 2000) panel connector: 12.5 mm or 1/2"
-- SP13 panel connectors (blue-black plastic connectors): 13 mm
-- PG9 cable gland: 16 mm or 5/8"
-
-Rubber or silicone grommets allow for significantly higher cable densities than panel connectors or cable glands. However, they are not as waterproof as panel connectors or cable glands. Furthermore, they require permanent cable attachment, which may make
-servicing the system more difficult.
-
-TODO: Add a picture of a grommet.
-
-### Soldering the Panel Connectors
-
-When soldering the internal wires to the panel connectors, always use heat shrink tubing on the individual wires.
-Always remember to slide the heat shrink onto the wires _before_ soldering...
-Usually, you can first add solder to the connector pin cavity and then re-melt the solder and insert the wire.
+Instructions for configuring Signal K can be found in the [Signal K documentation](https://github.com/SignalK/signalk-server?tab=readme-ov-file#configuration-and-use).
