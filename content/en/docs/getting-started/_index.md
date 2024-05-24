@@ -29,9 +29,13 @@ If a HALPI-S is to be screw-mounted, mounting tabs need to be devised and attach
 HALPI comes pre-installed with OpenPlotter 4 Headless edition.
 It can be used either with or without a display, keyboard, and mouse.
 
-Follow the [OpenPlotter 4 documentation](https://openplotter.readthedocs.io/en/4.x.x/getting_started/first_steps.html) to configure the system.
-The initial setup can be done most easily using [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) to connect to the HALPI computer.
-This provides a remote desktop interface to access the HALPI desktop interface.
+If you have display connected, follow the [OpenPlotter 4 documentation](https://openplotter.readthedocs.io/en/4.x.x/getting_started/first_steps.html) to configure the system.
+
+
+On a headless system, you will first need to connect to the WiFi Access Point created by the HALPI computer.
+Then, you can access the HALPI computer using VNC (or SSH) and carry on with the initial setup following the [OpenPlotter 4 documentation](https://openplotter.readthedocs.io/en/4.x.x/getting_started/).
+To use VNC, download [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/).
+VNC provides a remote desktop interface to access the HALPI desktop interface.
 
 Important steps are to change the default password, the WiFi Access Point password, and to configure WiFi client settings if needed.
 
