@@ -13,6 +13,7 @@ Documentation for each software component is provided by their respective projec
 - Signal K: [Signal K Documentation](https://signalk.org/)
 - AvNav: [AvNav Documentation](https://wellenvogel.net/software/avnav/docs/beschreibung.html?lang=en)
 - OpenCPN: [OpenCPN Documentation](https://opencpn.org/)
+- SKipper: [SKipper App](https://www.skipperapp.net/)
 
 Hat Labs provides some additional documentation relevant to common use cases of HALPI computers.
 
