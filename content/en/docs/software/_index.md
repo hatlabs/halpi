@@ -5,7 +5,8 @@ weight: 500
 
 ## Introduction
 
-HALPI is a general-purpose computer that comes preinstalled with OpenPlotter 4, a custom distribution of Raspberry Pi OS with a number of pre-installed applications and services.
+HALPI is a general-purpose computer that comes preinstalled with OpenPlotter 4, a custom distribution of Raspberry Pi OS with a number of pre-installed applications and services. HALPI's OpenPlotter installation is slightly customized to support the hardware and software features of the HALPI computer.
+
 Documentation for each software component is provided by their respective projects:
 
 - Raspberry Pi OS: [Raspberry Pi OS Documentation](https://www.raspberrypi.org/documentation/)
@@ -15,6 +16,14 @@ Documentation for each software component is provided by their respective projec
 - OpenCPN: [OpenCPN Documentation](https://opencpn.org/)
 
 Hat Labs provides some additional documentation relevant to common use cases of HALPI computers.
+
+## Software Updates
+
+In normal conditions, incremental updates with Raspberry Pi OS and OpenPlotter are provided through the package manager and OpenPlotter facilities. However, if you need to reinstall the system, you can download OpenPlotter-HALPI images from the [OpenPlotter-HALPI releases page](https://github.com/hatlabs/openplotter-halpi/releases).
+
+Reinstalling the system will erase all data on the computer, so make sure to back up any important data before proceeding.
+
+To install the image, you need to remove the SSD drive from the HALPI computer and connect it to another computer with an M.2 USB adapter. These adapters are available from various online retailers. The image can then be written to the SSD drive using [Raspberry Pi Imager](https://www.raspberrypi.org/software/). Once done, unplug the USB cable, remove the drive from the adapter and reinsert it to the HALPI computer.
 
 ## Data Logging and Visualization with InfluxDB and Grafana
 
